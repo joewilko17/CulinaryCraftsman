@@ -1,14 +1,13 @@
 import { Anvil, Search } from 'lucide-react';
-import '../styles/light.css'
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header className="header">
             <div className="container header-container">
-                <div className="logo">
+                <Link to={"/"} className="logo">
                     <Anvil className='logo-icon' />
                     <span className='logo-text'>CulinaryCraftsman</span>
-                </div>
+                </Link>
 
                 <div className="search-container">
                     <Search className="search-icon" />
@@ -16,7 +15,7 @@ const Header = () => {
                 </div>
 
                 <nav className='main-nav'>
-                    <button className='nav-link'> Craft a Recipe </button>
+                    <Link to={"/craft"} className='nav-link'> Craft a Recipe </Link>
                     <div className='auth-container'>
                         <button className='button button-outline button-small'> Sign In</button>
                         <button className='button button-primary button-small'> Sign Up</button>

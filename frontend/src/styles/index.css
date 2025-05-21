@@ -1,0 +1,148 @@
+/* INDEX PAGE */
+/* Hero Styles */
+.hero {
+    background: linear-gradient(to bottom, var(--color-green-500), white);
+    padding: var(--space-12) 0;
+    margin-top: 64px;
+}
+
+.hero-container {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-4);
+}
+
+.hero-title {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-description {
+    color: var(--color-gray-500);
+    max-width: 600px;
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+}
+
+.hero-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.hero-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+    padding: var(--space-16) 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+.card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.card-content {
+    padding: var(--space-4);
+}
+
+.card-tag {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-green-600);
+}
+
+.card-tag-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.card-tag-text {
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.card-title {
+    margin-top: var(--space-2);
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.card-description {
+    margin-top: var(--space-1);
+    color: var(--color-gray-500);
+    font-size: var(--text-sm);
+}
+
+/* Responsive Styles */
+@media (min-width: 400px) {
+    .hero-buttons {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-10);
+    }
+
+    .hero-title {
+        font-size: var(--text-5xl);
+    }
+
+    .hero-image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

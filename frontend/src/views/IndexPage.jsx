@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom';
-import '../styles/light.css'
+import '../styles/index.css'
 import { Book, Clock, Star } from "lucide-react"
 const IndexPage = () => {
     return (
-        <>
+        <main>
+            {/* Hero Section */}
             <section className="hero">
                 <div className="container hero-container">
                     <div className="hero-content">
                         <h1 className="hero-title">Discover Your Next Culinary Adventure</h1>
                         <p className="hero-description">
-                            Find recipes tailored to your taste, create your own collections, and share your culinary creations.
+                            Craft recipes tailored to your taste, create your own collections, and share your culinary creations.
                         </p>
                         <div className="hero-buttons">
-                            <button className="button button-primary">Craft a Recipe</button>
+                            <Link to={"/craft"} className="button button-primary">Craft a Recipe</Link>
                             <button className="button button-outline">Browse Recipes</button>
                         </div>
                     </div>
@@ -41,7 +42,7 @@ const IndexPage = () => {
 
                     <div className="card-grid">
                         {/* Craft Recipe Card */}
-                        <Link className="card">
+                        <Link to={"/craft"} className="card">
                             <div className="card-image">
                                 <img src="resources/card-anvil-food.png" alt="Craft a Recipe" fill className="image" />
                             </div>
@@ -87,7 +88,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </main>
     )
 }
 
