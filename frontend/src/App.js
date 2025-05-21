@@ -4,7 +4,7 @@ import './App.css';
 import './styles/global.css';
 import Layout from './layout/Layout';
 import IndexPage from './views/IndexPage';
-
+import CraftPage from './views/CraftPage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <IndexPage />
+      },
+      {
+        path: '/craft',
+        element: <CraftPage />
       }
     ]
   }
