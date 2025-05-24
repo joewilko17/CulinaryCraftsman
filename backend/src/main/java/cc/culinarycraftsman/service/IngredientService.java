@@ -1,8 +1,7 @@
 package cc.culinarycraftsman.service;
 
-import cc.culinarycraftsman.model.Ingredient;
+import cc.culinarycraftsman.model.ingredients.Ingredient;
 import cc.culinarycraftsman.repository.IngredientRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

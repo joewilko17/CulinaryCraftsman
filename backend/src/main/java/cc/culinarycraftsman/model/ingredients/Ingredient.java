@@ -1,4 +1,4 @@
-package cc.culinarycraftsman.model;
+package cc.culinarycraftsman.model.ingredients;
 
 import jakarta.persistence.*;
 import lombok.*;

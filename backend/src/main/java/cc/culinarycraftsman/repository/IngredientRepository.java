@@ -1,6 +1,6 @@
 package cc.culinarycraftsman.repository;
 
-import cc.culinarycraftsman.model.Ingredient;
+import cc.culinarycraftsman.model.ingredients.Ingredient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
