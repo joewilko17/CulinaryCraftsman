@@ -1,5 +1,6 @@
 package cc.culinarycraftsman.service;
 
+import cc.culinarycraftsman.model.ingredients.Ingredient;
 import cc.culinarycraftsman.model.recipes.Recipe;
 import cc.culinarycraftsman.repository.RecipeRepository;
 import org.springframework.stereotype.Service;
@@ -11,9 +12,16 @@ import java.util.Optional;
 public class RecipeService {
 
     private final RecipeRepository recipeRepository;
+    private final RecipeRecommendService recipeRecommendService;
 
-    public RecipeService(RecipeRepository recipeRepository) {
+    public RecipeService(RecipeRepository recipeRepository, RecipeRecommendService recipeRecommendService) {
         this.recipeRepository = recipeRepository;
+        this.recipeRecommendService = recipeRecommendService;
+    }
+
+    public List<Recipe> recommendRecipes(List<Ingredient> selectedIngredients) {
+        List<Recipe> allRecipes = recipeRepository.findAll();
+        return recipeRecommendService.recommendRecipes(selectedIngredients, allRecipes, 10);
     }
 
     public List<Recipe> getAllRecipes() {

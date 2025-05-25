@@ -1,6 +1,7 @@
 package cc.culinarycraftsman.controller;
 
 
+import cc.culinarycraftsman.model.ingredients.Ingredient;
 import cc.culinarycraftsman.model.recipes.Recipe;
 import cc.culinarycraftsman.service.RecipeService;
 import org.springframework.http.ResponseEntity;
@@ -36,5 +37,11 @@ public class RecipeController {
     public ResponseEntity<List<Recipe>> getRecipesByIds(@PathVariable List<Long> ids) {
         List<Recipe> recipes = (List<Recipe>) recipeService.getRecipesByIds(ids);
         return ResponseEntity.ok(recipes);
+    }
+
+    @PostMapping("/recommend")
+    public ResponseEntity<List<Recipe>> recommendRecipes(@RequestBody List<Ingredient> selectedIngredients) {
+        List<Recipe> recommendations = recipeService.recommendRecipes(selectedIngredients);
+        return ResponseEntity.ok(recommendations);
     }
 }
