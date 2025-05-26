@@ -1,0 +1,221 @@
+/* CRAFT PAGE */
+/* Ingredient Styles */
+.craft-section {
+    padding: var(--space-12) 0;
+    margin-top: 64px;
+    min-height: calc(100vh - 64px);
+}
+
+.ingredients-layout {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ingredients-panel {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.panel-header {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.panel-tab-group {
+    padding: var(--space-3);
+    border-bottom: 1px solid var(--color-gray-200);
+    gap: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.category-button {
+    padding: var(--space-4);
+    width: 150px;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-gray-500);
+    transition: all 0.2s ease;
+}
+
+.category-button:hover {
+    background-color: var(--color-gray-100);
+}
+
+.category-button.active {
+    background-color: var(--color-green-400);
+    color: var(--color-gray-50);
+}
+
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--space-4);
+    padding: var(--space-4);
+}
+
+.ingredient-grid-wrapper {
+    overflow-y: scroll;
+    height: 500px;
+    scrollbar-gutter: stable;
+}
+
+.ingredient-card {
+    padding: var(--space-6) var(--space-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-gray-200);
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ingredient-card:hover {
+    border-color: var(--color-green-300);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-card.selected {
+    background-color: var(--color-green-100);
+    border-color: var(--color-green-300);
+}
+
+.ingredient-card-image {
+    margin-bottom: var(--space-2);
+}
+
+.ingredient-card-text {
+    height: var(--space-10);
+}
+
+.ingredients-no-results {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-12);
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.selected-panel {
+    width: 300px;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.button-selected-panel-clear {
+    padding: var(--space-2);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+}
+
+.button-selected-panel-clear:hover {
+    background-color: var(--color-green-100);
+
+}
+
+.selected-tooltip {
+    background-color: var(--color-green-100);
+    display: flex;
+    height: 70px;
+    padding: var(--space-2);
+    margin-bottom: var(--space-2);
+    gap: var(--space-2);
+    border-radius: var(--radius-md);
+}
+
+.tooltip-icon {
+    width: 48px;
+    height: 48px;
+    transition: color 0.3s ease;
+}
+
+.tooltip-icon.valid {
+    color: orange;
+}
+
+.button-craft {
+    font-size: var(--text-xl);
+    width: 250px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.button-craft:disabled {
+    background-color: #cccccc;
+    /* greyed out */
+    color: #666666;
+}
+
+.button-craft span {
+    margin-bottom: 5px;
+}
+
+.icon-sm {
+    width: 24px;
+    height: 24px;
+}
+
+.selected-panel-button-group {
+    padding: var(--space-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-scrollbox-wrapper {
+    overflow-y: auto;
+    height: 500px;
+    scrollbar-gutter: stable;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.selected-scrollbox {
+    padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+
+}
+
+.selected-card {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: var(--space-2);
+    width: 200px;
+    text-align: left;
+    padding: var(--space-2);
+    background-color: var(--color-gray-100);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+.selected-card:hover {
+    border-color: var(--color-green-300);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
