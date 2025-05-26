@@ -1,7 +1,6 @@
 /* INDEX PAGE */
 /* Hero Styles */
-.hero {
-    background: linear-gradient(to bottom, var(--color-green-500), white);
+.hero-section {
     padding: var(--space-12) 0;
     margin-top: 64px;
 }
@@ -58,7 +57,7 @@
 }
 
 /* Features Section */
-.features {
+.features-section {
     padding: var(--space-16) 0;
 }
 
@@ -69,6 +68,7 @@
 }
 
 .card {
+    background: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);

@@ -3,9 +3,9 @@ import '../styles/index.css'
 import { Book, Clock, Star } from "lucide-react"
 const IndexPage = () => {
     return (
-        <main>
+        <main className='main'>
             {/* Hero Section */}
-            <section className="hero">
+            <section className="hero-section">
                 <div className="container hero-container">
                     <div className="hero-content">
                         <h1 className="hero-title">Discover Your Next Culinary Adventure</h1>
@@ -14,7 +14,7 @@ const IndexPage = () => {
                         </p>
                         <div className="hero-buttons">
                             <Link to={"/craft"} className="button button-primary">Craft a Recipe</Link>
-                            <button className="button button-outline">Browse Recipes</button>
+                            <Link to={"/recipes"} className="button button-outline">Browse Recipes</Link>
                         </div>
                     </div>
                     <div className="hero-image-container">
@@ -33,10 +33,10 @@ const IndexPage = () => {
             </section>
 
             {/* Features Section */}
-            <section className="features">
+            <section className="features-section">
                 <div className="container">
                     <div className="section-header">
-                        <h2 className="section-title">Discover a new way to cook</h2>
+                        <h2 className="section-title">Discover a New Way to Cook</h2>
                         <p className="section-description">Craft recipes and find your next favorite dish.</p>
                     </div>
 
@@ -64,7 +64,7 @@ const IndexPage = () => {
                             <div className="card-content">
                                 <div className="card-tag">
                                     <Star className="card-tag-icon" />
-                                    <span className="card-tag-text">Personalise your experience</span>
+                                    <span className="card-tag-text">Personalise Your Experience</span>
                                 </div>
                                 <h3 className="card-title">Create an account</h3>
                                 <p className="card-description">Register a new user account to access personalised features.</p>
@@ -79,10 +79,10 @@ const IndexPage = () => {
                             <div className="card-content">
                                 <div className="card-tag">
                                     <Book className="card-tag-icon" />
-                                    <span className="card-tag-text">Browse our large collection</span>
+                                    <span className="card-tag-text">Browse Our Large Collection</span>
                                 </div>
                                 <h3 className="card-title">Recipe Database</h3>
-                                <p className="card-description">Browse and search our delicious recipe collection.</p>
+                                <p className="card-description">View our delicious collection of recipes.</p>
                             </div>
                         </Link>
                     </div>
