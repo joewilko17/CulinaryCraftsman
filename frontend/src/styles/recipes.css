@@ -1,0 +1,136 @@
+.recipes-section {
+    padding: var(--space-12) 0;
+    margin-top: 64px;
+    min-height: calc(100vh - 64px - 92px);
+}
+
+.recipe-search {
+    margin-top: var(--space-6);
+}
+
+.recipes-layout {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.recipe-card-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card-image:hover .recipe-card-image img {
+    transform: scale(1.05);
+}
+
+.recipe-card-content {
+    padding: var(--space-4);
+}
+
+.recipe-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    color: var(--color-gray-900);
+}
+
+.recipe-meta {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-3);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    color: var(--color-gray-500);
+    font-size: var(--text-sm);
+}
+
+.meta-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.recipe-ingredients-preview {
+    margin-bottom: var(--space-4);
+}
+
+.ingredients-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-gray-700);
+    margin-bottom: var(--space-1);
+}
+
+.ingredients-text {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+    line-height: 1.4;
+}
+
+.button-view-recipe {
+    width: 100%;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-green-600);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.button-view-recipe:hover {
+    background-color: var(--color-green-700);
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recipe-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ingredients-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+    .recipes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
