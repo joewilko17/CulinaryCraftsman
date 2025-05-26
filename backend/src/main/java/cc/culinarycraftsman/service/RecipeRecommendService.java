@@ -1,9 +1,9 @@
 package cc.culinarycraftsman.service;
 
+import cc.culinarycraftsman.dto.IngredientDTO;
 import cc.culinarycraftsman.model.ingredients.Ingredient;
 import cc.culinarycraftsman.model.recipes.Ingredients;
 import cc.culinarycraftsman.model.recipes.Recipe;
-import cc.culinarycraftsman.repository.RecipeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.AbstractMap;
@@ -15,10 +15,10 @@ import java.util.stream.Collectors;
 @Service
 public class RecipeRecommendService {
 
-    public List<Recipe> recommendRecipes(List<Ingredient> selectedIngredients, List<Recipe> allRecipes, int numRecipes) {
+    public List<Recipe> recommendRecipes(List<IngredientDTO> selectedIngredients, List<Recipe> allRecipes, int numRecipes) {
 
         Set<String> selectedSet = selectedIngredients.stream()
-                .map(Ingredient::getName)
+                .map(IngredientDTO::getName)
                 .map(String::toLowerCase)
                 .collect(Collectors.toSet());
 

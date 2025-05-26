@@ -1,6 +1,7 @@
 package cc.culinarycraftsman.controller;
 
 
+import cc.culinarycraftsman.dto.IngredientDTO;
 import cc.culinarycraftsman.model.ingredients.Ingredient;
 import cc.culinarycraftsman.model.recipes.Recipe;
 import cc.culinarycraftsman.service.RecipeService;
@@ -40,7 +41,7 @@ public class RecipeController {
     }
 
     @PostMapping("/recommend")
-    public ResponseEntity<List<Recipe>> recommendRecipes(@RequestBody List<Ingredient> selectedIngredients) {
+    public ResponseEntity<List<Recipe>> recommendRecipes(@RequestBody List<IngredientDTO> selectedIngredients) {
         List<Recipe> recommendations = recipeService.recommendRecipes(selectedIngredients);
         return ResponseEntity.ok(recommendations);
     }
