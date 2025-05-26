@@ -11,16 +11,16 @@ const Footer = () => {
             </div>
 
             <div className="footer-links">
-              <a href="#" className="footer-link">
+              <a className="footer-link">
                 About
               </a>
-              <a href="#" className="footer-link">
+              <a  className="footer-link">
                 Contact
               </a>
-              <a href="#" className="footer-link">
+              <a  className="footer-link">
                 Privacy
               </a>
-              <a href="#" className="footer-link">
+              <a  className="footer-link">
                 Terms
               </a>
             </div>
